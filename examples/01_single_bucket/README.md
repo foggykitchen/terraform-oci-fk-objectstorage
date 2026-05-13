@@ -15,6 +15,14 @@ This deployment creates:
 
 ---
 
+## Example Result
+
+After `tofu apply`, the bucket is visible in the OCI Console as a private Object Storage bucket with the default standard storage tier and Oracle-managed encryption.
+
+![OCI Console view of the bucket created by example 01](01_single_bucket_oci_console1.png)
+
+---
+
 ## Deployment Steps
 
 ```bash

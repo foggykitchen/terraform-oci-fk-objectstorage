@@ -15,7 +15,7 @@ resource "oci_objectstorage_bucket" "this" {
 
   access_type           = try(each.value.access_type, "NoPublicAccess")
   auto_tiering          = try(each.value.auto_tiering, "Disabled")
-  kms_key_id            = coalesce(try(each.value.kms_key_id, null), var.kms_key_id)
+  kms_key_id            = try(each.value.kms_key_id, null) != null ? each.value.kms_key_id : var.kms_key_id
   metadata              = try(each.value.metadata, {})
   object_events_enabled = try(each.value.object_events_enabled, false)
   storage_tier          = try(each.value.storage_tier, "Standard")

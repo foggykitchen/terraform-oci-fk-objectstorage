@@ -16,6 +16,14 @@ This deployment creates:
 
 ---
 
+## Example Result
+
+After `tofu apply`, both buckets are visible in the OCI Console: a public artifacts bucket on the standard tier and a private logs bucket on the archive tier.
+
+![OCI Console view of the buckets created by example 02](02_multiple_buckets_oci_console1.png)
+
+---
+
 ## Deployment Steps
 
 ```bash

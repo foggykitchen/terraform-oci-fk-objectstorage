@@ -18,6 +18,11 @@ variable "region" {
   type = string
 }
 
+variable "availability_domain" {
+  type    = string
+  default = null
+}
+
 variable "compartment_ocid" {
   type = string
 }
