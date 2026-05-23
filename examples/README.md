@@ -43,7 +43,7 @@ If you prefer Terraform, replace `tofu` with `terraform`.
 ## Related Resources
 
 - [FoggyKitchen OCI Object Storage Module (terraform-oci-fk-objectstorage)](../)
-- [FoggyKitchen OCI File Storage Module (terraform-oci-fk-filestorage)](https://github.com/mlinxfeld/terraform-oci-fk-filestorage)
+- [FoggyKitchen OCI File Storage Module (terraform-oci-fk-filestorage)](https://github.com/foggykitchen/terraform-oci-fk-filestorage)
 - [FoggyKitchen Azure Storage Module (terraform-az-fk-storage)](https://github.com/mlinxfeld/terraform-az-fk-storage)
 
 ---
