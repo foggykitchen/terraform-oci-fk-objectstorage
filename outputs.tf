@@ -5,6 +5,11 @@ output "namespace" {
 
 output "bucket_ids" {
   description = "Map of bucket OCIDs keyed by bucket map key."
+  value       = { for key, bucket in oci_objectstorage_bucket.this : key => bucket.bucket_id }
+}
+
+output "bucket_paths" {
+  description = "Map of Object Storage bucket resource paths keyed by bucket map key."
   value       = { for key, bucket in oci_objectstorage_bucket.this : key => bucket.id }
 }
 
@@ -18,6 +23,7 @@ output "buckets" {
   value = {
     for key, bucket in oci_objectstorage_bucket.this : key => {
       id                    = bucket.id
+      bucket_id             = bucket.bucket_id
       name                  = bucket.name
       namespace             = bucket.namespace
       access_type           = bucket.access_type

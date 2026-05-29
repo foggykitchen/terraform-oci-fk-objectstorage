@@ -144,6 +144,7 @@ buckets = map(object({
 |------|-------------|
 | `namespace` | Resolved OCI Object Storage namespace |
 | `bucket_ids` | Map of bucket OCIDs keyed by bucket key |
+| `bucket_paths` | Map of Object Storage bucket resource paths (`n/<namespace>/b/<bucket>`) keyed by bucket key |
 | `bucket_names` | Map of bucket names keyed by bucket key |
 | `buckets` | Computed bucket metadata keyed by bucket key |
 
