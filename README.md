@@ -69,7 +69,7 @@ All examples are runnable and demonstrate **incremental Object Storage patterns*
 
 ```hcl
 module "objectstorage" {
-  source = "git::https://github.com/foggykitchen/terraform-oci-fk-objectstorage.git?ref=v0.2.0" # TODO: tag not yet released
+  source = "git::https://github.com/foggykitchen/terraform-oci-fk-objectstorage.git?ref=v0.2.0"
 
   compartment_ocid = var.compartment_ocid
   name             = "fk-obj"
@@ -84,7 +84,7 @@ module "objectstorage" {
 
 ```hcl
 module "objectstorage" {
-  source = "git::https://github.com/foggykitchen/terraform-oci-fk-objectstorage.git?ref=v0.2.0" # TODO: tag not yet released
+  source = "git::https://github.com/foggykitchen/terraform-oci-fk-objectstorage.git?ref=v0.2.0"
 
   compartment_ocid = var.compartment_ocid
   name             = "fk-obj"
