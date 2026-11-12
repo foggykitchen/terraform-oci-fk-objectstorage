@@ -1,5 +1,5 @@
 module "objectstorage" {
-  source = "git::https://github.com/foggykitchen/terraform-oci-fk-objectstorage.git?ref=v0.1.0"
+  source = "../.."
 
   compartment_ocid = var.compartment_ocid
   name             = "fk-obj-demo-01"
