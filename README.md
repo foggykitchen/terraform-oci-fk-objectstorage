@@ -69,7 +69,7 @@ All examples are runnable and demonstrate **incremental Object Storage patterns*
 
 ```hcl
 module "objectstorage" {
-  source = "git::https://github.com/foggykitchen/terraform-oci-fk-objectstorage.git?ref=v0.1.0"
+  source = "git::https://github.com/foggykitchen/terraform-oci-fk-objectstorage.git?ref=v0.2.0"
 
   compartment_ocid = var.compartment_ocid
   name             = "fk-obj"
@@ -84,7 +84,7 @@ module "objectstorage" {
 
 ```hcl
 module "objectstorage" {
-  source = "git::https://github.com/foggykitchen/terraform-oci-fk-objectstorage.git?ref=v0.1.0"
+  source = "git::https://github.com/foggykitchen/terraform-oci-fk-objectstorage.git?ref=v0.2.0"
 
   compartment_ocid = var.compartment_ocid
   name             = "fk-obj"
@@ -202,3 +202,16 @@ See [LICENSE](LICENSE) for details.
 ---
 
 © 2026 [FoggyKitchen.com](https://foggykitchen.com) - Cloud. Code. Clarity.
+
+## Requirements
+
+| Requirement | Version |
+|---|---|
+| OpenTofu | >= 1.11.0 (CI: 1.11.6) |
+| oracle/oci | >= 9.12.1, < 10.0.0 |
+
+## BREAKING: requires OCI provider >= 9.12.1
+
+OCI provider 6.x, 7.x and 8.x are no longer supported. Upgrade the root configuration and all child modules together, then run `tofu init -upgrade` and review `tofu plan` before applying. The module inputs, outputs and resource addresses are unchanged.
+
+GitHub Actions runs formatting, initialization, validation and mocked plan tests for the root module and every embedded example, using OpenTofu 1.11.6 and OCI 9.12.1. Tests do not require OCI credentials.
